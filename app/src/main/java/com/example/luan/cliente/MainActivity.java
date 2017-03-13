@@ -14,6 +14,7 @@ public class MainActivity extends Activity {
 
     private EditText Mensaje;
     protected static TextView Etiqueta;
+    ClientThread Client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         Mensaje = (EditText) findViewById(R.id.TxtMensaje);
         Etiqueta = (TextView) findViewById(R.id.Etiqueta);
+        Client = new ClientThread(this);
     }
 
     public void onClick(View V) {
         if (!Mensaje.getText().toString().equals("")) {
-            ClientThread Client = new ClientThread(this);
             Client.execute(Mensaje.getText().toString());
             Mensaje.setText("");
         } else {
