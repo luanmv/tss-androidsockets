@@ -10,13 +10,14 @@ import java.io.DataOutputStream;
 /**
  * Created by Luan on 07/03/2017.
  */
-public class ClientThread extends Conection {
+
+class ClientThread extends Conection {
 
     private Activity Parent;
     private String ServerMessage;
     private String ClientMessage;
 
-    public ClientThread(Activity Parent) {
+    ClientThread(Activity Parent) {
         super();
         this.Parent = Parent;
     }
