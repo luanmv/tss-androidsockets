@@ -3,7 +3,6 @@ package com.example.luan.cliente;
 import android.app.Activity;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
